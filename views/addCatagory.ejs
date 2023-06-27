@@ -1,0 +1,95 @@
+
+
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Page wrapper  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+              <h4 class="page-title">Form Basic</h4>
+              <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Library
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+          <!-- ============================================================== -->
+          <!-- Start Page Content -->
+          <!-- ============================================================== -->
+          <div class="row">
+            <div class="col-md-6">
+              <% if(flash.success.length > 0 && flash.success) { %>
+                <div class="alert alert-success"><%= flash.success %></div>
+              <% } %>
+              <div class="card mb-0">
+                <form action="/Catagory/AddCatagoryInfo" class="form-horizontal" method="post">
+                  <div class="card-body">
+                    <h4 class="card-title">Add Catagory</h4>
+
+<!-- ---------------------------------SELECT------------------------------- -->
+
+
+                    <% gender =['Male','Female'] %>
+                    <label for="fname" style="width: 74%;margin-right: 70px;margin-left: 140px;font-size: 20px;" class="col-sm-3 text-end control-label col-form-label"></label>
+                      <div class="form-group row">
+                      <label for="fname" class="col-sm-3 text-end control-label col-form-label">Select Gender</label>
+                      <div class="col-sm-9">
+                        <select name="gender" class="form-control">
+                          <option value="">--Select Gender--</option>
+                          <% for(var i=0; i<gender.length; i++){ %>
+                            <option value="<%= gender[i] %>"><%= gender[i] %></option>
+                          <% } %>
+                        </select>
+                        
+                      </div>
+                    </div>
+
+  <!-- ---------------------------------SUBMIT------------------------------- -->
+
+                  </div>
+                  <div class="border-top">
+                    <div class="card-body text-end bg-white">
+                      <input type="submit" value="Submit" name="submit" class="btn btn-primary">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+        
+          <!-- ============================================================== -->
+          <!-- End PAge Content -->
+          <!-- ============================================================== -->
+          <!-- ============================================================== -->
+          <!-- Right sidebar -->
+          <!-- ============================================================== -->
+          <!-- .right-sidebar -->
+          <!-- ============================================================== -->
+          <!-- End Right sidebar -->
+          <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        

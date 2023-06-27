@@ -1,0 +1,95 @@
+
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Page wrapper  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+              <h4 class="page-title">Tables</h4>
+              <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Library
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+          <!-- ============================================================== -->
+          <!-- Start Page Content -->
+
+
+<!-- ----------------------------------------------VIEW TABLE---------------------------------------- -->
+
+
+            <div class="row">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">USERS DETAILS</h5>
+                    <div class="table-responsive">
+                    <table id="zero_config" class="table table-striped table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Category Id</th>
+                            <th>Subcategory Name</th>
+                            <th>Catagory Name</th>
+                            <th>Delete</th>
+                            <th>update</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <% for(var sub of data){ %>
+                        <tr>
+                            <td><%= sub.id %></td>
+                            <td><%= sub.SubCatagory_name %></td>
+                            <td><%= sub.catagoryId.gender %></td>
+                            <td><a href="/SubCatagory/deleteSubCatageryRec/?id=<%= sub.id %>" style="padding: 3px 5px; color: #fff; background-color: red; border-color: #7460ee;">DELETE</a></td>
+                            <td><a href="/SubCatagory/udpateSubCatageryPage/?id=<%= sub.id %>" style="padding: 3px 5px; color: #fff; background-color: #7460ee; border-color: #7460ee;">UPDATE</a></td>
+                            
+                            </tr>
+                        <% } %>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End PAge Content -->
+          <!-- ============================================================== -->
+          <!-- ============================================================== -->
+          <!-- Right sidebar -->
+          <!-- ============================================================== -->
+          <!-- .right-sidebar -->
+          <!-- ============================================================== -->
+          <!-- End Right sidebar -->
+          <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        
